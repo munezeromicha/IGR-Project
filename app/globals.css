@@ -1,0 +1,52 @@
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Custom styles for form elements */
+input:focus, textarea:focus, select:focus {
+  @apply outline-none ring-2 ring-green-500 border-transparent;
+}
+
+/* Custom styles for buttons */
+.btn-primary {
+  @apply bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-100 text-green-800 font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105;
+}
+
+.btn-outline {
+  @apply bg-transparent hover:bg-white/20 border-2 border-white text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105;
+}
+
+/* Custom card styles */
+.card {
+  @apply bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl hover:-translate-y-2;
+}
+
+/* Custom service card hover effect */
+.service-card:hover .service-icon {
+  @apply text-white;
+}
+
+.service-card:hover {
+  @apply bg-green-600 text-white;
+}
